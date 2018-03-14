@@ -15,7 +15,7 @@ public class AppService {
 		
 			if(user.getUsername().equals("admin" )  
 					&& user.getPassword().equals("admin")){
-				return dbUser;
+				return new Object();//not null
 			}
 		}
 		return null;
