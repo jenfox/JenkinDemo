@@ -12,10 +12,9 @@ public class AppService {
 		
 		BankUserDao dao = new BankUserDaoImpl();
 		
-		BankUser dbUser = dao.getUserByUsername(user);
-		if(dbUser != null){
-			if( dbUser.getUsername().equals("admin" )  
-					&& dbUser.getPassword().equals("admin")){
+		
+			if(user.getUsername().equals("admin" )  
+					&& user.getPassword().equals("admin")){
 				return dbUser;
 			}
 		}
