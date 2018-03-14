@@ -39,11 +39,11 @@ public class LoginServlet extends HttpServlet {
 		 * 	Validate user through our Business Logic Classes aka Service Classes
 		 * 
 		 */
-		clientUser = new AppService().validateUser(clientUser);
+		//clientUser = new AppService().validateUser(clientUser);
 		
 		
 		System.out.println("The user enter: " + username + " & " + password);
-		if(clientUser != null){
+		if(new AppService().validateUser(clientUser)){
 			
 			HttpSession session = req.getSession(); 
 			

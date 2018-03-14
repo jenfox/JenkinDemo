@@ -8,17 +8,12 @@ import com.revature.model.BankUser;
 
 public class AppService {
 	
-	public BankUser validateUser(BankUser user){
+	public boolean validateUser(BankUser user){
 		
-		BankUserDao dao = new BankUserDaoImpl();
-		
-		
-			if(user.getUsername().equals("admin" )  
-					&& user.getPassword().equals("admin")){
-				return new Object();//not null
-			}
-		}
-		return null;
+		if(user.getUsername().equals("admin")
+			&& user.getPassword().equals("admin"))
+			return true;
+		return false;
 		
 	}
 
